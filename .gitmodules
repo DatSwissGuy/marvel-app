@@ -1,0 +1,6 @@
+[submodule "marvel-app-frontend"]
+	path = marvel-app-frontend
+	url = ./marvel-app-frontend
+[submodule "marvel-app-backend"]
+	path = marvel-app-backend
+	url = ./marvel-app-backend
