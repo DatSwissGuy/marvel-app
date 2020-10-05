@@ -1,6 +1,6 @@
 [submodule "marvel-app-frontend"]
 	path = marvel-app-frontend
-	url = ./marvel-app-frontend
+	url = https://github.com/DatSwissGuy/marvel-app-frontend
 [submodule "marvel-app-backend"]
 	path = marvel-app-backend
-	url = ./marvel-app-backend
+	url = https://github.com/DatSwissGuy/marvel-app-backend
