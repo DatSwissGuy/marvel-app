@@ -3,7 +3,7 @@ services:
 
   mysql:
     image: mysql:5.7
-    container_name: marvel-backend-mysql
+    container_name: marvel-app-mysql
     working_dir: /application
     volumes:
       - ./marvel-app-backend:/application
@@ -19,7 +19,7 @@ services:
 
   webserver:
     image: nginx:alpine
-    container_name: marvel-backend-webserver
+    container_name: marvel-app-webserver
     working_dir: /application
     volumes:
       - ./marvel-app-backend:/application
@@ -31,14 +31,14 @@ services:
     build: 
       context: ./marvel-app-backend
       dockerfile: Dockerfile
-    container_name: marvel-backend-php-fpm
+    container_name: marvel-app-php-fpm
     working_dir: /application
     volumes:
       - ./marvel-app-backend:/application
       - ./marvel-app-backend/docker/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
 
   node:
-    container_name: marvel-app-frontend
+    container_name: marvel-app-client
     build:
       context: ./marvel-app-frontend
       dockerfile: Dockerfile
