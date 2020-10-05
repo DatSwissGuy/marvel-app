@@ -24,10 +24,13 @@ This Angular App was created during my internship at [Liip](https://www.liip.ch)
 ---
 # How to run the app
 
-## Marvel API
+## Git Submodules
+Clone the repo, run `git submodule update --init` to initialize the submodules (Frontend and Backend Repositories).
+
+## Add your Marvel API credentials
 First of all you'll need your own API credentials from the official Marvel API (https://developer.marvel.com). Add those credentials to the `environment.ts` file (src/environments/environment.ts) or...
 
-...you do the same as i did and add the API credentials to `environment.prod.ts`. I did this out of convenience, this is by no means good practice!
+...you do the same as i did and add the API credentials to `environment.prod.ts`. I did this out of convenience, this is by no means good practice! These files are found in `marvel-app-frontend` repository.
 
 
 ```typescript
@@ -58,23 +61,9 @@ export const environment = {
 
 `timeStamp` is just any random string (refer to the documentation) and the hash is generated via MD5 algorithm.
 
-## Install dependencies (npm)
-`npm install`
-
-## Run the App via runtime (aka Angular CLI)
-Once you got everything set up, just run `ng serve` or `ng serve --prod` if you added the credentials to `environment.prod.ts`.
-
 ## Run the App via Docker
-Alternatively you can run the app via Docker. You need to build the image first, run (in the project / repository root folder) `docker-compose build`. Then run `docker-compose up`.
+You need to build the image first, run (in the project / repository root folder) `docker-compose build`. Then run `docker-compose up`.
 Mind you, this way changes in the source WON'T rebuild on its own!
-
-Why docker-compose for a single image / container? Out of convenience...
-
-## Backend (Optional)
-For further features, like a (character) visitor counter, a option to "like" / "favorize" characters, a 5-star rating system, a user profile and so on, a backend was added (REST). Currently the following backend options are available or work in progress:
-
-- **Laravel** (+ MySQL) in this [repository](https://github.com/DatSwissGuy/marvel-app-backend).
-- **.NET core** (+ Any Database), currently work in progress, really hard to get into, this will certainly take a while.
 
 # Additional information
 
@@ -88,8 +77,7 @@ These items are in no particular order or priority.
 - Add AuthGuard for the user profile page
 - ~~Add initial server side rendering and also "dockerize" it~~
 - Add a multi stage docker setup: 1. build the application, 2. serve / run the app
-- Add a "full-stack" repository so the app including backend can be run with a single `docker-compose up` command.
-
+- ~~Add a "full-stack" repository so the app including backend can be run with a single `docker-compose up` command.~~
 
 ## WIP's
 - SSR still not working the way i'd like
