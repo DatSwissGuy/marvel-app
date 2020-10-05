@@ -1,6 +1,8 @@
 [submodule "marvel-app-frontend"]
 	path = marvel-app-frontend
 	url = https://github.com/DatSwissGuy/marvel-app-frontend
+	branch = master
 [submodule "marvel-app-backend"]
 	path = marvel-app-backend
 	url = https://github.com/DatSwissGuy/marvel-app-backend
+	branch = master
