@@ -30,7 +30,9 @@ Clone the repo, run `git submodule update --init` to initialize the submodules (
 ## Add your Marvel API credentials
 First of all you'll need your own API credentials from the official Marvel API (https://developer.marvel.com). Add those credentials to the `environment.ts` file (src/environments/environment.ts) or...
 
-...you do the same as i did and add the API credentials to `environment.prod.ts`. I did this out of convenience, this is by no means good practice! These files are found in `marvel-app-frontend` repository.
+...you do the same as i did and add the API credentials to `environment.prod.ts`. I did this out of convenience, until i find a more suitable solution. 
+
+The environment files are found in the frontend repository / directory (marvel-app-frontend/src/environments/environment.ts).
 
 
 ```typescript
