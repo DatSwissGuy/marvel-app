@@ -28,11 +28,9 @@ This Angular App was created during my internship at [Liip](https://www.liip.ch)
 Clone the repo, run `git submodule update --init` to initialize the submodules (Frontend and Backend Repositories).
 
 ## Add your Marvel API credentials
-First of all you'll need your own API credentials from the official Marvel API (https://developer.marvel.com). Add those credentials to the `environment.ts` file (src/environments/environment.ts) or...
+In order to fetch data from the official Marvel API (https://developer.marvel.com), you'll need to add your own API credentials. Add those credentials to the `environment.ts` file in the frontend repository / directory (marvel-app-frontend/src/environments/environment.ts) or...
 
 ...you do the same as i did and add the API credentials to `environment.prod.ts`. I did this out of convenience, until i find a more suitable solution. 
-
-The environment files are found in the frontend repository / directory (marvel-app-frontend/src/environments/environment.ts).
 
 
 ```typescript
@@ -43,11 +41,9 @@ export const environment = {
 
   // Credentials for the Marvel API
   apiPublicKey: 'MyPublicKey',
-  apiPrivateKey: 'MyPrivateKey',
   timeStamp: 'MyTimestamp',
 
   // md5(Timestamp + Private Key + Public Key)
-  // md5(MyTimestampMyPrivateKeyMyPublicKey)
   hash: 'MyGeneratedHash',
 
   apiInitialOffset: 0,
@@ -56,7 +52,7 @@ export const environment = {
 
   // Backend (Laravel)
   backEndApiUrl: 'http://localhost:8080/api/v1',
-  authClientId: 123,
+  authClientId: 123456789,
   authClientSecret: 'someSecretStringFromTheLaravelAuthApi'
 };
 ```
