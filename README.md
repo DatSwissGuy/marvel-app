@@ -65,6 +65,11 @@ Mind you, this way changes in the source WON'T rebuild on its own!
 
 # Additional information
 
+## Login credentials
+
+You login via the `sign in` button. 2 Accounts are available.
+`user: marvel | password: marvel` or `user: admin | password: admin` 
+
 ## TODO's
 These items are in no particular order or priority.
 
