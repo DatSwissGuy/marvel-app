@@ -30,7 +30,9 @@ Clone the repo, run `git submodule update --init` to initialize the submodules (
 ## Add your Marvel API credentials
 In order to fetch data from the official Marvel API (https://developer.marvel.com), you'll need to add your own API credentials. Add those credentials to the `environment.ts` file in the frontend repository / directory (marvel-app-frontend/src/environments/environment.ts) or...
 
-...you do the same as i did and add the API credentials to `environment.prod.ts`. I did this out of convenience, until i find a more suitable solution. Keep the Backend credentials the way they are, unless you want to setup your own Laravel `ClientId` and `ClientSecret`.
+...you do the same as i did and add the API credentials to `environment.prod.ts`. I did this out of convenience, until i find a more suitable solution. 
+
+Keep the Backend credentials the way they are, unless you want to setup your own Laravel `ClientId` and `ClientSecret`.
 
 
 ```typescript
