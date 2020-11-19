@@ -79,15 +79,15 @@ These items are in no particular order or priority.
 - Clean up code e.g. get rid of some anti-patterns (E.g. current route via NgRx)
 - ~~Add inital docker support to run the app~~
 - Add a check if the backend is available, and if not, don't show the login header
-- Add AuthGuard for the user profile page
+- ~~Add AuthGuard for the user profile page~~
 - ~~Add initial server side rendering and also "dockerize" it~~
 - Add a multi stage docker setup: 1. build the application, 2. serve / run the app
 - ~~Add a "full-stack" repository so the app including backend can be run with a single `docker-compose up` command.~~
 - Find a better solution for the access token as it is currently saved in local storage
 
 ## WIP's
-- SSR still not working the way i'd like
-- Better docker setups
+- Better AuthGuard implementation
+- Further NgRx features (client side routing)
 
 ## DONT'S
 Don't use this app for production! It's for educational purposes only! 
