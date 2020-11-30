@@ -2,7 +2,7 @@
 
 This is an educational Angular SPA consuming 2 RESTful APIs: The official Marvel API and a custom made API (Laravel).
 
-This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9 and has been updated / upgraded to Angular version 10 including all dependencies (e.g. NgRx).
+This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9 and has been updated / upgraded to Angular version 11 including all dependencies (e.g. NgRx).
 
 This Angular App was created during my internship at [Liip](https://www.liip.ch)
 
@@ -32,6 +32,8 @@ In order to fetch data from the official Marvel API (https://developer.marvel.co
 
 ...you do the same as i did and add the API credentials to `environment.prod.ts`. I did this out of convenience, until i find a more suitable solution. 
 
+Keep the Backend credentials the way they are, unless you want to set up your own Laravel `ClientId` and `ClientSecret`.
+
 
 ```typescript
 export const environment = {
@@ -52,37 +54,47 @@ export const environment = {
 
   // Backend (Laravel)
   backEndApiUrl: 'http://localhost:8080/api/v1',
-  authClientId: 123456789,
-  authClientSecret: 'someSecretStringFromTheLaravelAuthApi'
+  authClientId: 2,
+  authClientSecret: 'EWgZb1NOXSYYVOrtaz3b8fpX6vCJBhRKzvdb0L42'
 };
 ```
 
 `timeStamp` is just any random string (refer to the documentation) and the hash is generated via MD5 algorithm.
 
 ## Run the App via Docker
-You need to build the image first, run (in the project / repository root folder) `docker-compose build`. Then run `docker-compose up`.
+You need to build the image first, run `docker-compose build`. Then run `docker-compose up`.
 Mind you, this way changes in the source WON'T rebuild on its own!
 
 # Additional information
+
+## Login credentials
+
+You login via the `sign in` button. 2 Accounts are available.
+
+`user: marvel | password: marvel` 
+
+or 
+
+`user: admin | password: admin` 
 
 ## TODO's
 These items are in no particular order or priority.
 
 - Finish this readme 😅
-- Clean up code e.g. get rid of some anti-patterns (E.g. current route via NgRx)
+- ~~Clean up code e.g. get rid of some anti-patterns (E.g. current route via NgRx)~~
 - ~~Add inital docker support to run the app~~
 - Add a check if the backend is available, and if not, don't show the login header
 - ~~Add AuthGuard for the user profile page~~
 - ~~Add initial server side rendering and also "dockerize" it~~
 - Add a multi stage docker setup: 1. build the application, 2. serve / run the app
 - ~~Add a "full-stack" repository so the app including backend can be run with a single `docker-compose up` command.~~
+- Find a better solution for the access token as it is currently saved in local storage
+- Add Unit tests
+- Add E2E tests
 
 ## WIP's
-- Better AuthGuard implementation
-- Further NgRx features (client side routing)
+- Better AuthGuard implementation 🔐
+- Cooler animations for page transitions 😎
 
 ## DONT'S
-Don't use this app for production! It's for educational purposes only! 
-
-One of the many reasons is the missing copyright annotations (which Marvel demands if you publish something which makes use of their API) and besides that, the access token from the backend is saved in local storage, which is a really bad practice!
-Also: anti-patterns ☹️
+Don't use this app for production! It's for educational / demo purposes only! 
