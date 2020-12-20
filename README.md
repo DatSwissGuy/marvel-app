@@ -4,7 +4,7 @@ This is an educational Angular SPA consuming 2 RESTful APIs: The official Marvel
 
 This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9 and has been updated / upgraded to Angular version 11 including all dependencies (e.g. NgRx).
 
-This Angular App was created during my internship at [Liip](https://www.liip.ch)
+This Angular App was created during my internship at [Liip](https://www.liip.ch). After my internship it has been further developed this includes some new features like: a full stack Docker Compose ready to spin it up using git submodules to separate frontend and backend, server side rendering for the front end, access control for the user profile page and so on...
 
 ---
 # Screenshots
